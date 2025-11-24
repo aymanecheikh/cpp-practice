@@ -122,14 +122,76 @@ void math_funcs()
 
 }
 
-int main()
+void string_basics()
 {
 	string greeting = "hello";
 	string complete_greeting = greeting + " there";
-	complete_greeting += "!";
 	cout << complete_greeting << endl;
-	cout << complete_greeting.length() << endl;
+	cout << "appending '!' to string" << endl;
+	complete_greeting += "!";
+	cout << complete_greeting << endl << endl;
 	string greeting_getlined;
 	getline(cin, greeting_getlined);
-	cout << greeting_getlined << endl;
+	
+	cout << endl << "length of string: " << greeting_getlined.length()
+		<< endl;
+	cout << "size of string: " << greeting_getlined.size() << endl
+		<< endl;
+	
+	cout << "appending '!' to greeting_getlined: "
+		<< greeting_getlined.append("!") << endl << endl;
+	
+	cout << "breaking up greeting_getlined: "
+		<< greeting_getlined.insert(3, "\t\t") << endl << endl;
+	
+	cout << "putting greeting_getlined back together again: "
+		<< greeting_getlined.erase(3, 2) << endl << endl;
+	
+	cout << "removing '!' from the greeting_getlined to return it to its "
+		<< "original form: "
+		<< greeting_getlined.erase(greeting_getlined.length() -1)
+		<< endl << endl;
+
+	greeting_getlined.pop_back();
+	cout << "oops... we went too far with an alternative final index "
+		<< "eraser..." << greeting_getlined << endl
+		<< endl;
+	
+	cout << "killing the integrity of greeting_getlined: "
+		<< greeting_getlined.erase(3) << endl << endl;
+
+	cout << "unfortunately, my world is corrupt, so I will override our "
+		<< "little string here with a string of my own choice... "
+		<< endl << greeting_getlined.replace(0, 4, "c++ is my future")
+		<< endl << endl;
+
+	cout << "my cutting edge deep tech algo has incorrectly identified a "
+		<< "bad word: " << greeting_getlined.replace(9, 4, "****")
+		<< endl << endl;
+
+	cout << "searching for a programming language and censoring it for "
+		<< "copyright purposes... XD: "
+		<< greeting_getlined.replace(
+			greeting_getlined.find("c++"), 3, "***"
+		) << endl << endl;
+
+	cout << "extracting a specific subsctring: "
+		<< greeting_getlined.substr(5, 2) << endl << endl;
+
+	cout << "We need to reset our string as we've manipulated it to "
+		<< "obseletion: "
+		<< greeting_getlined.replace(
+			0,
+			4,
+			"Hi my name is Barthomelow Matthews "
+		) << endl << endl;
+
+	cout << "We will now find the first vowel in this new string: "
+		<< greeting_getlined.find_first_of("aeiou") << endl << endl;
+}
+
+
+int main()
+{
+
 }
