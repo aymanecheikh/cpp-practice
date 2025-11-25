@@ -193,5 +193,9 @@ void string_basics()
 
 int main()
 {
+	cout << "'c'" << "\"c\"" << "<<< These are ways to set up constants"
+		<< endl << endl;
 
+	auto x = 5ULL;
+	cout << x << endl << endl;
 }
